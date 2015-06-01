@@ -3,9 +3,9 @@ package trycatch;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class TryCatch {
 	
@@ -32,7 +32,7 @@ public class TryCatch {
 		WebDriver driver = util.AxaDriverFactory.createAxaIEDriver();
 		try {
 			driver.get("http://www.abraxas.ch");
-			Assert.assertEquals(driver.getTitle(), "GRIDFUSION.net - Home");	
+			Assert.assertEquals("GRIDFUSION.net - Home", driver.getTitle());	
 		}
 		catch (Error e) {
 			System.out.println("Error message: " + e.getMessage());

@@ -4,15 +4,15 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
 
 public class CustomWait {
 
 	
-	@Test(invocationCount=1)
+	@Test
 	public void implicitWaitHeroku() throws InterruptedException, FileNotFoundException, IOException {
 
 		WebDriver driver = util.AxaDriverFactory.createAxaRemoteIEDriver();
@@ -34,7 +34,7 @@ public class CustomWait {
 	
 	
 	
-	@Test(invocationCount=1)
+	@Test
 	public void explicitWait() throws InterruptedException, FileNotFoundException, IOException {
 		//WebDriver driver=new FirefoxDriver();
 		

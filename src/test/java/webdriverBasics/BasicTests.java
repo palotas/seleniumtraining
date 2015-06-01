@@ -3,12 +3,12 @@ package webdriverBasics;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class BasicTests {
 
@@ -63,7 +63,7 @@ public class BasicTests {
 	public void pageTitleTestWithAssertNoTryCatch() throws FileNotFoundException, IOException {
 		WebDriver driver = util.AxaDriverFactory.createAxaIEDriver();
 		driver.get("http://gridfusion.net");
-		Assert.assertEquals(driver.getTitle(), "GRIDFUSION");
+		Assert.assertEquals("GRIDFUSION", driver.getTitle());
 		driver.quit();
 	}
 	
@@ -73,7 +73,7 @@ public class BasicTests {
 		WebDriver driver = util.AxaDriverFactory.createAxaIEDriver();
 		try {
 			driver.get("http://gridfusion.net");
-			Assert.assertEquals(driver.getTitle(), "ridfusion");			
+			Assert.assertEquals( "ridfusion", driver.getTitle());			
 		}
 		finally {
 			driver.quit();			

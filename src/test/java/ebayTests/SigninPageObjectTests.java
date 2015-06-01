@@ -3,8 +3,8 @@ package ebayTests;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
 
 import ebayPageObjects.SigninPage;
 
