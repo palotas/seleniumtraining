@@ -7,3 +7,8 @@
 
 ## Grid startup
 - Node: java -jar selenium-server-standalone-2.46.0.jar -role wd -nodeConfig "C:\Users\Michael Palotas\Desktop\seleniumtraining\nodeconfigs\nodeConfigWinIEFirefox.json" -hub http://localhost:4444/grid/register -Dwebdriver.ie.driver=IEDriverServer.exe
+
+## Virtualbox
+- Disable authentication:  VBoxManage setproperty websrvauthlibrary null
+- Start Server: vboxwebsrv -v
+
